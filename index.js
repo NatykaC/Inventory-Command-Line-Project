@@ -5,30 +5,30 @@ const {index, show, create, destroy, edit} = require("./src/candlesController");
 const inform = console.log
 
 function run(){
-    let candlesFile = readJSONFile("data", "candles.json")
+    let candles = readJSONFile("data", "candles.json")
 
     const action = process.argv[2];
     const candle = process.argv[3];
 
     switch (action){
         case "index":
-            const candlesView = index(candlesFile)
+            const candlesView = index(candles)
             inform(candlesView);
             break;
         case "show":
-            const candlesViewShow = show(candlesFile, candle)
+            const candlesViewShow = show(candles, candle)
             inform(candlesViewShow);
             break;
         case "create":
-            updatedCandles = create(candlesFile, candle)
+            updatedCandles = create(candles, candle)
             writeToFile = true;
             break;
         case "update":
-            updatedCandles = edit(candlesFile, candle, process.argv[4])
+            updatedCandles = edit(candles, candle, process.argv[4])
             writeToFile = true;
             break;
         case "destroy":
-            updatedCandles = destroy(candlesFile, candle)
+            updatedCandles = destroy(candles, candle)
             writeToFile = true;
             break;
         case "score": 
