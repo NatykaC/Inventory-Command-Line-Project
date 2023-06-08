@@ -4,7 +4,7 @@ const {
 } = require("node:fs")
 
 function readJSONFile(path, fileName) {
-  const collection = fs.readFileSync(`${path}/${fileName}`, "utf8");
+  const collection = readFileSync(`${path}/${fileName}`, "utf8");
   return collection ? JSON.parse(collection) : [];
 }
 

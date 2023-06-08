@@ -1,6 +1,6 @@
 const {readJSONFile, writeJSONFile} = require("./src/helpers");
 
-const {index, show} = require("./src/candlesController");
+const {index, show, create, destroy, edit} = require("./src/candlesController");
 
 const inform = console.log
 
