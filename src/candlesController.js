@@ -4,14 +4,14 @@ const { readJSONFile, writeJSONFile } = require("./helpers");
 
 const inform = console.log
 
-function index(arrayOfCandles){
-    return arrayOfCandles.map((eachCandle)=> `ID#: ${eachCandle.id},` + " " +`Candle name: ${eachCandle.name},` + " " +`Price $${eachCandle.priceInCents},` + " " +`In Stock: ${eachCandle.inStock},` + " " +`Number of Wicks: ${eachCandle.numberOfWicks}`).join("\n");
+function index(candles){
+    return candles.map((eachCandle)=> `Id#: ${eachCandle.id},` + " " +`Candle name: ${eachCandle.name},` + " " +`Price $${eachCandle.priceInCents},` + " " +`In Stock: ${eachCandle.inStock},` + " " +`Number of Wicks: ${eachCandle.numberOfWicks}`).join("\n");
  }
  
  
- function show(arrayOfCandles, id){
-     const candleToFind = arrayOfCandles.find((candle) => candle.id === id);
-     return candle.id+ " " + candle.name + " " + candle.priceInCents + " " + candle.inStock + " " + candle.numberOfWicks;
+ function show(candles, candleId){
+    const candleToFind = candles.find((candle) => candle.id === parseInt(candleId));
+    return `Id#: ${candleToFind.id},` + " " + `Candle Name: ${candleToFind.name},` + " " + `Price $${candleToFind.priceInCents},` + " " + `In Stock: ${candleToFind.inStock},` + " " + `Number of Wicks: ${candleToFind.numberOfWicks}`;
  } 
 
 function create(candles, candleName) {

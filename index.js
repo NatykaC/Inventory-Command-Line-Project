@@ -5,7 +5,9 @@ const {index, show, create, destroy, edit} = require("./src/candlesController");
 const inform = console.log
 
 function run(){
-    let candles = readJSONFile("data", "candles.json")
+    let candles = readJSONFile("./data", "candles.json");
+    let writeToFile = false;
+    let updatedCandles = [];
 
     const action = process.argv[2];
     const candle = process.argv[3];
@@ -31,10 +33,7 @@ function run(){
             updatedCandles = destroy(candles, candle)
             writeToFile = true;
             break;
-        case "score": 
-            const score = 
-            inform()
-            break;
+        
         default:
             inform("Did it work?")
     }
