@@ -1,15 +1,16 @@
 const {nanoid} = require("nanoid");
 const { faker } = require("@faker-js/faker");
+const { readJSONFile, writeJSONFile } = require("./helpers");
 
 const inform = console.log
 
 function index(arrayOfCandles){
-    return arrayOfCandles.map((eachCandle)=> eachCandle.id + " " +eachCandle.name).join("\n");
+    return arrayOfCandles.map((eachCandle)=> eachCandle.id + " " +eachCandle.name + " " +eachCandle.priceInCents + " " +eachCandle.inStock + " " +eachCandle.numberOfWicks).join("\n");
  }
  
  
  function show(arrayOfCandles, candleId){
-     const candleToFind = arrayOfCandles.find((candle) => candle.id ===candleId);
+     const candleToFind = arrayOfCandles.find((candle) => candle.id === candleId);
      return candleToFind.id + " " + candleToFind.name + " " + candleToFind.numberOfWicks + "numberOfWicks"
  } 
 

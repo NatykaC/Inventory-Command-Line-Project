@@ -3,6 +3,9 @@ const {
     writeFileSync
 } = require("node:fs")
 
+const path = "./data"
+const fileName = "candles.json"
+
 function readJSONFile(path, fileName) {
   const collection = readFileSync(`${path}/${fileName}`, "utf8");
   return collection ? JSON.parse(collection) : [];
