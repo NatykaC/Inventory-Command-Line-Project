@@ -1,13 +1,16 @@
-const {readJSONFile, writeJSONFile} = require("./src/helpers");
+const {readJSONFile, writeJSONFile} = require("./src/helpers.js");
 
-const {index, show, create, destroy, edit} = require("./src/candlesController");
+const {index, show, create, destroy, edit} = require("./src/candlesController.js");
 
-const inform = console.log
+const{createRandomCandle} = require("./src/candlesCreator.js");
+
+const inform = console.log;
 
 function run(){
     let candles = readJSONFile("./data", "candles.json");
     let writeToFile = false;
     let updatedCandles = [];
+    writeJSONFile("./data", "candles.json", candles)
 
     const action = process.argv[2];
     const candle = process.argv[3];
