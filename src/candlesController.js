@@ -10,7 +10,7 @@ function index(candles){
  
  
  function show(candles, candleId){
-    const candleToFind = candles.find((candle) => candle.id === parseInt(candleId));
+    const candleToFind = candles.find((candle) => candle.id === parseInt(candleId))
     return `Id#: ${candleToFind.id},` + " " + `Candle Name: ${candleToFind.name},` + " " + `Price $${candleToFind.priceInCents},` + " " + `In Stock: ${candleToFind.inStock},` + " " + `Number of Wicks: ${candleToFind.numberOfWicks}`;
  } 
 
