@@ -11,13 +11,13 @@ function index(candles){
  
  
 function show(candles, candleId){
-    const candleToFind = candles.find((candle) => candle.id === parseInt(candleId))
+    const candleToFind = candles.find((candle) => candle.id === candleId)
     return `Id#: ${candleToFind.id},` + " " + `Candle Name: ${candleToFind.name},` + " " + `Price $${candleToFind.priceInCents},` + " " + `In Stock: ${candleToFind.inStock},` + " " + `Number of Wicks: ${candleToFind.numberOfWicks}`;
  } 
 
 function create(candles) {
     candleCreated = candles.push(createRandomCandle());
-    return candles;
+    return candleCreated;
   }
 
   function destroy(candles, candleId){
@@ -33,7 +33,7 @@ function create(candles) {
 
   function edit(candles, candleId, updatedCandle){
     const index = candles.findIndex((candle) => candle.id === candleId);
-    if (index >-1){
+    if (index > -1){
         candles[index].id = candleId;
         candles[index].name = updatedCandle;
         inform("Candle has been updated successfully!");

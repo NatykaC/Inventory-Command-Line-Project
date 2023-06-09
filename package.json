@@ -11,7 +11,7 @@
     "show": "node index.js show",
     "update": "node index.js update",
     "destroy": "node index.js destroy",
-    "score": "node index.js score"
+    "edit": "node index.js edit"
   },
   "keywords": [],
   "author": "",
