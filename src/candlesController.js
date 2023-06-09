@@ -1,6 +1,7 @@
 const {nanoid} = require("nanoid");
 const { faker } = require("@faker-js/faker");
 const { readJSONFile, writeJSONFile } = require("./helpers");
+const {createRandomCandle} = require("./candlesCreator");
 
 const inform = console.log
 
@@ -9,14 +10,13 @@ function index(candles){
  }
  
  
- function show(candles, candleId){
+function show(candles, candleId){
     const candleToFind = candles.find((candle) => candle.id === parseInt(candleId))
     return `Id#: ${candleToFind.id},` + " " + `Candle Name: ${candleToFind.name},` + " " + `Price $${candleToFind.priceInCents},` + " " + `In Stock: ${candleToFind.inStock},` + " " + `Number of Wicks: ${candleToFind.numberOfWicks}`;
  } 
 
-function create(candles, candleName) {
-    const candle = { name: candleName, id: nanoid(4)};
-    candles.push(candle);
+function create(candles) {
+    candleCreated = candles.push(createRandomCandle());
     return candles;
   }
 

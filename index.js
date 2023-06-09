@@ -7,10 +7,11 @@ const{createRandomCandle} = require("./src/candlesCreator.js");
 const inform = console.log;
 
 function run(){
-    let candles = readJSONFile("./data", "candles.json");
+    let candles = readJSONFile("./data", "candles.json")
     let writeToFile = false;
     let updatedCandles = [];
-    writeJSONFile("./data", "candles.json", candles)
+    let candleCreated = [];
+    
 
     const action = process.argv[2];
     const candle = process.argv[3];
@@ -25,8 +26,8 @@ function run(){
             inform(candlesViewShow);
             break;
         case "create":
-            updatedCandles = create(candles, candle)
-            writeToFile = true;
+            candleCreated = create(candles, candle)
+            writeJSONFile("./data", "candles.json", candles);
             break;
         case "update":
             updatedCandles = edit(candles, candle, process.argv[4])
