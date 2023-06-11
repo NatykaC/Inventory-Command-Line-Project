@@ -6,7 +6,7 @@ function createRandomCandle(){
     const randomCandle = {
         id: nanoid(4),
         name: process.argv[3],
-        priceInCents: faker.commerce.price(10, 200, 2, "$"),
+        priceInCents: faker.commerce.price(10, 200, 2),
         inStock: faker.datatype.boolean(),
         numberOfWicks: 3
     }

@@ -1,6 +1,6 @@
 const {readJSONFile, writeJSONFile} = require("./src/helpers.js");
 
-const {index, show, create, destroy, edit} = require("./src/candlesController.js");
+const {index, show, create, destroy, edit, addToCart} = require("./src/candlesController.js");
 
 const{createRandomCandle} = require("./src/candlesCreator.js");
 
@@ -11,6 +11,7 @@ function run(){
     let writeToFile = false;
     let updatedCandles = [];
     let candleCreated = [];
+    let candlesCart = [];
     
 
     const action = process.argv[2];
@@ -37,6 +38,12 @@ function run(){
             updatedCandles = destroy(candles, candle)
             writeJSONFile("./data", "candles.json", candles);
             break;
+        case "addToCart":
+            candlesCart = addToCart(candles, candle)
+            inform(candlesCart);
+            writeJSONFile("./data", "candlesCart.json", candle);
+            break;
+
         
         default:
             inform("Did it work?")
