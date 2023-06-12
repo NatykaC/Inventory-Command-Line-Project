@@ -1,6 +1,6 @@
 const {readJSONFile, writeJSONFile} = require("./src/helpers.js");
 
-const {index, show, create, destroy, edit, addToCart, emptyCart} = require("./src/candlesController.js");
+const {index, show, create, destroy, edit, addToCart, emptyCart, inStock} = require("./src/candlesController.js");
 
 const{createRandomCandle} = require("./src/candlesCreator.js");
 
@@ -45,6 +45,10 @@ function run(){
         case "emptyCart":
             emptyShoppingCart = emptyCart()
             inform(emptyShoppingCart);
+            break;
+        case "inStock":
+            inStockCandles = inStock(candles, candle)
+            inform(inStockCandles, outOfStockCandles);
             break;
         
         default:

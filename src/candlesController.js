@@ -47,7 +47,7 @@ function addToCart(candles, candleId){
     candlesCart = [];
     const candleToAdd = candles.find((candle) => candle.id === candleId);
     if (candleToAdd.inStock === true){
-        candlesCart.push(`My Candles Shopping Cart: Id#: ${candleToAdd.id},` + " " + `Candle Name: ${candleToAdd.name},` + " " + `Price $${candleToAdd.priceInCents},` + " " + `In Stock: ${candleToAdd.inStock},` + " " + `Number of Wicks: ${candleToAdd.numberOfWicks}`)
+        candlesCart.push(`My Candles Shopping Cart: Id#: ${candleToAdd.id},` + " " + `Candle Name: ${candleToAdd.name},` + " " + `Price $${candleToAdd.priceInCents},` + " " + `In Stock: ${candleToAdd.inStock},` + " " + `Number of Wicks: ${candleToAdd.numberOfWicks}`);
         return candlesCart;
     }
    else{
@@ -61,5 +61,21 @@ function emptyCart(candles){
   };
 
 
+function inStock(candles, candleId){
+    inStockCandles = [];
+    outOfStockCandles = [];
+    const isCandleInStock = candles.find((candle) => candle.id === candleId);
+    if (isCandleInStock.inStock === true){
+        inStockCandles.push("true")
+        return inStockCandles;
+    } else {
+        if (isCandleInStock.inStock === false){
+            outOfStockCandles.push("false")
+            return outOfStockCandles
+        }
+    }
 
-  module.exports = {index, show, create, destroy, edit, addToCart, emptyCart}
+  }
+
+
+  module.exports = {index, show, create, destroy, edit, addToCart, emptyCart, inStock}
