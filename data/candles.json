@@ -1,1 +1,13 @@
-[{"id":"aBCd","name":"Sweet Mango","priceInCents":500,"inStock":true,"numberOfWicks":1},{"id":"Ep7r","name":"Black Cherry","priceInCents":650,"inStock":true,"numberOfWicks":3},{"id":"jKlm","name":"Apple Cinnamon","priceInCents":575,"inStock":true,"numberOfWicks":2},{"id":"NoR6","name":"Strawberry Lemonade","priceInCents":550,"inStock":true,"numberOfWicks":1},{"id":"Zwy1","name":"Pineapple Dream","priceInCents":625,"inStock":false,"numberOfWicks":2},{"id":"Wv9c","name":"Peach Fuzz","priceInCents":700,"inStock":true,"numberOfWicks":3},{"id":"Tko6","name":"Coconut Water","priceInCents":675,"inStock":true,"numberOfWicks":3},{"id":"Ps3f","name":"Blackberry Molasses","priceInCents":525,"inStock":false,"numberOfWicks":1},{"id":"I9dm","name":"Grape Escape","priceInCents":600,"inStock":true,"numberOfWicks":2},{"id":"3FBQ","name":"Plum Paradise","priceInCents":"82.00","inStock":false,"numberOfWicks":3}]
+[
+{"id": "aBCd", "name": "Sweet Mango", "priceInCents": 500, "inStock":true, "numberOfWicks": 1},
+{"id": "Ep7r", "name": "Black Cherry", "priceInCents": 650, "inStock":true, "numberOfWicks": 3},
+{"id": "jKlm", "name": "Apple Cinnamon", "priceInCents": 575, "inStock":true, "numberOfWicks": 2},
+{"id": "NoR6", "name": "Strawberry Lemonade", "priceInCents": 550, "inStock":true, "numberOfWicks": 1},
+{"id": "Zwy1", "name": "Peapple Dream", "priceInCents": 625, "inStock":false, "numberOfWicks": 2},
+{"id": "Wv9c", "name": "Peach Fuzz", "priceInCents": 700, "inStock":true, "numberOfWicks": 3},
+{"id": "Tko6", "name": "Coconut Water", "priceInCents": 675, "inStock":true, "numberOfWicks": 3},
+{"id": "Ps3f", "name": "Blackberry Molasses", "priceInCents": 525, "inStock":false, "numberOfWicks": 1},
+{"id": "I9dm", "name": "Grape Escape", "priceInCents": 600, "inStock":true, "numberOfWicks": 2},
+{"id": "3FBQ", "name": "Plum Paradise", "priceInCents": 82.00, "inStock":false, "numberOfWicks": 3},
+{"id": "3udy", "name": "Lemon Lime", "priceInCents": 134.00, "inStock":false, "numberOfWicks": 3}
+]

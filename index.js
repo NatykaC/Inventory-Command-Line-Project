@@ -1,13 +1,13 @@
 const {readJSONFile, writeJSONFile} = require("./src/helpers.js");
 
-const {index, show, create, destroy, edit, addToCart} = require("./src/candlesController.js");
+const {index, show, create, destroy, edit, addToCart, emptyCart} = require("./src/candlesController.js");
 
 const{createRandomCandle} = require("./src/candlesCreator.js");
 
 const inform = console.log;
 
 function run(){
-    let candles = readJSONFile("./data", "candles.json", "candlesCart.json")
+    let candles = readJSONFile("./data", "candles.json")
     let writeToFile = false;
     let updatedCandles = [];
     let candleCreated = [];
@@ -41,9 +41,11 @@ function run(){
         case "addToCart":
             candlesCart = addToCart(candles, candle)
             inform(candlesCart);
-            writeJSONFile("./data", "candlesCart.json", candle);
             break;
-
+        case "emptyCart":
+            emptyShoppingCart = emptyCart()
+            inform(emptyShoppingCart);
+            break;
         
         default:
             inform("Did it work?")

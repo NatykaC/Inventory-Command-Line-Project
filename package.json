@@ -12,7 +12,8 @@
     "update": "node index.js update",
     "destroy": "node index.js destroy",
     "edit": "node index.js edit",
-    "addToCart": "node index.js addToCart"
+    "addToCart": "node index.js addToCart",
+    "emptyCart": "node index.js emptyCart"
   },
   "keywords": [],
   "author": "Natyka Callwood",

@@ -55,8 +55,11 @@ function addToCart(candles, candleId){
     }
   }
 
-  function emptyCart(){};
+function emptyCart(candles){
+    const emptyShoppingCart = [];
+    return emptyShoppingCart;
+  };
 
 
 
-  module.exports = {index, show, create, destroy, edit, addToCart}
+  module.exports = {index, show, create, destroy, edit, addToCart, emptyCart}
