@@ -6,13 +6,13 @@ const {createRandomCandle} = require("./candlesCreator");
 const inform = console.log
 
 function index(candles){
-    return candles.map((eachCandle)=> `Id#: ${eachCandle.id},` + " " +`Candle name: ${eachCandle.name},` + " " +`Price $${eachCandle.priceInCents},` + " " +`In Stock: ${eachCandle.inStock},` + " " +`Number of Wicks: ${eachCandle.numberOfWicks}`).join("\n");
+    return candles.map((eachCandle)=> `Id: ${eachCandle.id},` + " " +`Candle name: ${eachCandle.name},` + " " +`Price $${eachCandle.priceInCents},` + " " +`In Stock: ${eachCandle.inStock},` + " " +`Number of Wicks: ${eachCandle.numberOfWicks}`).join("\n");
  }
  
  
 function show(candles, candleId){
     const candleToFind = candles.find((candle) => candle.id === candleId);
-    return `Id#: ${candleToFind.id},` + " " + `Candle Name: ${candleToFind.name},` + " " + `Price $${candleToFind.priceInCents},` + " " + `In Stock: ${candleToFind.inStock},` + " " + `Number of Wicks: ${candleToFind.numberOfWicks}`;
+    return `Id: ${candleToFind.id},` + " " + `Candle Name: ${candleToFind.name},` + " " + `Price $${candleToFind.priceInCents},` + " " + `In Stock: ${candleToFind.inStock},` + " " + `Number of Wicks: ${candleToFind.numberOfWicks}`;
  } 
 
 function create(candles) { 
@@ -47,7 +47,7 @@ function addToCart(candles, candleId){
     candlesCart = [];
     const candleToAdd = candles.find((candle) => candle.id === candleId);
     if (candleToAdd.inStock === true){
-        candlesCart.push(`My Candles Shopping Cart: Id#: ${candleToAdd.id},` + " " + `Candle Name: ${candleToAdd.name},` + " " + `Price $${candleToAdd.priceInCents},` + " " + `In Stock: ${candleToAdd.inStock},` + " " + `Number of Wicks: ${candleToAdd.numberOfWicks}`);
+        candlesCart.push(`My Candles Shopping Cart: Id: ${candleToAdd.id},` + " " + `Candle Name: ${candleToAdd.name},` + " " + `Price $${candleToAdd.priceInCents},` + " " + `In Stock: ${candleToAdd.inStock},` + " " + `Number of Wicks: ${candleToAdd.numberOfWicks}`);
         return candlesCart;
     }
    else{
